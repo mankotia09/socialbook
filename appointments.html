@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Appointment Booking(Personal\Collaborative)</title>
+    <style>
+      /* Add CSS styles for the form */
+      body {
+        background-image: url(https://i.pinimg.com/originals/72/a1/84/72a184aa7846cad0d5a82cf55dc3f406.jpg);
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+      h1, h2 {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+      
+      select, input[type="checkbox"], input[type="date"], input[type="time"] {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        padding: 8px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+      }
+      input[type="submit"] {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: none;
+        background-color: #4CAF50;
+        color: #fff;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      label {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      /* Add advisor photos */
+      .advisor-photo {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+      .advisor-photo.Hasan {
+        background-image: url("https://www.linkpicture.com/q/hasan-jamil.jpg");
+      }
+      .advisor-photo.Eric {
+        background-image: url("https://www.linkpicture.com/q/eric-anderson-portrait-2020.jpg");
+      }
+      .advisor-photo.Jim {
+        background-image: url("https://www.linkpicture.com/q/photo-1568316674077-d72ee56de61c.jpg");
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Appointment Booking(Personal\Collaborative)</h1>
+    <form>
+      <h2>Select Advisor:</h2>
+      <div class="advisor-photo john"></div>
+      <select name="advisor">
+        <option value="Hasan Jamil(primary Advisor)">Hasan Jamil(primary Advisor)</option>
+        <option value="Eric(career advisor)">Eric(career advisor)</option>
+        <option value="jim(Finiancial Aid advisor)">jim(Finiancial Aid advisor)</option>
+      </select>
+      
+      <h2>Select Friends:</h2>
+      <input type="checkbox" name="friend" value="Emma Johnson">Emma Johnson<br>
+      <input type="checkbox" name="friend" value="Adam Lee">Adam Lee<br>
+      <input type="checkbox" name="friend" value="Emily Williams">Emily Williams<br>
+      
+      <h2>Select Date and Time:</h2>
+      <label for="date">Date:</label>
+      <input type="date" name="date"><br>
+      <label for="time">Time:</label>
+      <input type="time" name="time"><br>
+      
+      <input type="submit" value="Submit">
+    </form>
+    <script>
+     // Get the advisor select element and advisor photo div
+const advisorSelect = document.querySelector('select[name="advisor"]');
+const advisorPhotoDiv = document.querySelector('.advisor-photo');
+
+// Add an event listener to the advisor select element
+advisorSelect.addEventListener('change', () => {
+  // Get the selected advisor value
+  const selectedAdvisor = advisorSelect.value;
+  
+  // Remove any existing advisor class from the photo div
+  advisorPhotoDiv.classList.remove('Hasan', 'Eric', 'Jim');
+  
+  // Add the selected advisor class to the photo div
+  if (selectedAdvisor === 'Hasan Jamil(primary Advisor)') {
+    advisorPhotoDiv.classList.add('Hasan');
+  } else if (selectedAdvisor === 'Eric(career advisor)') {
+    advisorPhotoDiv.classList.add('Eric');
+  } else if (selectedAdvisor === 'jim(Finiancial Aid advisor)') {
+    advisorPhotoDiv.classList.add('Jim');
+  }
+});
+// Get the form element
+const appointmentForm = document.querySelector("form");
+
+// Add event listener to form submit
+appointmentForm.addEventListener("submit", () => {
+  // Display appointment scheduled message
+  alert("Your appointment has been scheduled.");
+});
+
+
+    </script>
+  </body>
+  </html>    

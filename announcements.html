@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>News</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+	font-family: Arial, sans-serif;
+	color: #333;
+}
+
+header {
+	background-color: #d3e111;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+}
+
+nav {
+	background-color: #eeea1c;
+	color: #333;
+	padding: 10px;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+li a {
+	color: #060505;
+	text-decoration: none;
+	transition: color 0.2s ease-in-out;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+li a:hover {
+	color: #e7ea19;
+	background-color: #fff;
+}
+
+article {
+	padding: 20px;
+	margin-bottom: 20px;
+	background-color: #f9f9f9;
+	box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+	transition: transform 0.2s ease-in-out;
+}
+
+article:hover {
+	transform: scale(1.02);
+}
+
+h1, h2 {
+	color: #333;
+	text-align: center;
+}
+
+p {
+	color: #666;
+	line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+	ul {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	li a {
+		display: block;
+		margin-bottom: 10px;
+	}
+}
+</style>
+</head>
+<body>
+	<header>
+		<h1>Campus News</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="https://www.uidaho.edu/cogs/resources/workshops">News 1</a></li>
+			<li><a href="https://www.uidaho.edu/cals/entomology-plant-pathology-and-nematology/news/seminars">News 2</a></li>
+			<li><a href="https://www.uidaho.edu/academics/ipo/study-abroad/students/uofi-undergraduates/info-session">News 3</a></li>
+			<li><a href="https://libcal.uidaho.edu/event/10085789">News 4</a></li>
+		</ul>
+	</nav>
+	<main>
+		<article id="news1">
+			<h2>Research Assistant (RA) Support Group</h2>
+			<p>Graduate Research Assistants can find support, share resources, and build community at the RA Support Group, led by the College of Graduate Studies and graduate faculty members. This group is ideal for graduate students who wish to discuss their struggles and successes during the research process.
+                Any graduate student or postdoc who is currently planning or conducting research is encouraged to join. Baked goods will be provided.</p>
+		</article>
+		<article id="news2">
+			<h2>EPPN Seminar</h2>
+			<p>
+                When	Monday, March 20, 2023, 3 to 4pm
+                University Location	AG SCI 62 - Ag Science - Main Campus
+                Details	
+                Presentation: "Reprogramming the plant vascular system: A viral approach to systemic disease"
+                
+                Dr. James Culver
+                
+                Plant Science and Landscape Architecture
+                
+                University of Maryland</p>
+		</article>
+		<article id="news3">
+			<h2>Education Abroad First-Time Info Session</h2>
+			<p>
+                When	Monday, March 20, 2023, 3:30 to 4:30pm
+                University Location	International Programs Office (IPO) Conference Room - Living Learning Community - Main Campus
+                Details	
+                This session is designed to help you understand more about education abroad options, financing, academic planning as well as highlight programs and opportunities you may not have heard about. This is the first step to toward making your education abroad or National Student Exchange dreams a reality! Sign up required using the online form.</p>
+		</article>
+		<article id="news4">
+			<h2>Exploring the Information Landscape | King Arthur: Real Person, Real Uncertainty</h2>
+			<p>When	Monday, March 20, 2023, 12 to 1pm
+                University Location	First Floor Classroom (120) - Library - Main Campus
+                Details	
+                The figure of King Arthur is presented throughout history in a variety of ways. We will briefly review popular films, literature and historical sites to familiarize ourselves with the character of King Arthur. After walking through these resources, we will focus on a few aspects of King Arthur's legend while discussing their presence and impact in modern times. In today’s workshop, you’ll expand your knowledge of how you think about a research topic, while making interdisciplinary connections between seemingly simple stories.</p>
+		</article>
+	</main>
+</body>
+</html>
